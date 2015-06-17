@@ -1,15 +1,5 @@
-class Fixnum 
-  def fact
-    self > 1 ? self * (self - 1).fact : 1
-  end
+def factorial(first, last)
+	last > first ? last * factorial(first, last-1) : first
 end
 
-class Range
-  def fact
-    self.last > self.first ? self.last * (self.last-1).fact : 1
-  end
-end
-
-puts 7.fact
-
-puts (1..9).fact
+puts factorial(4,10)
